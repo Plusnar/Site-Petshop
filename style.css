@@ -1,0 +1,58 @@
+/* Arquivo CSS: style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+    font-size:large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(90, 11, 11);
+    
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 10px;
+    row-gap: 10px;
+
+}
+
+.icon {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+
+}
+.sobrepor { 
+    position: relative; 
+    width: 100px; 
+    height: 100px; 
+    overflow: hidden; 
+    object-fit: cover;
+  } 
