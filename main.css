@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./imagens/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 20px;
+    margin-top: 0;
+    font-size: 13px;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+    padding: 20px;
+}
+
+nav ul li a {
+    transition: 0.2s;
+}
+
+nav ul {
+    margin: 20px;
+}
+
+nav ul li a:hover {
+    border-radius: 50px;
+    background: darkgrey;
+}
+
+
+
+
+
+
+/* imagens rotativas */
+.slider {
+    margin: 0 auto;
+    text-align: center;
+    width: 870px;
+    height: 450px;
+    overflow: hidden; /* Mostra apenas o que está delimitado em largura e altura */
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none; /* Ocultou os rádios que estavam na parte de fora */
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 5s;
+}
+
+
+.slide img {     /* Agora precisa arrumar cada imagem */
+    width: 850px;
+    height: 450px;
+}
+
+
+/* Colocando os botões centralizados no inferior dos slides */
+.manual-navigation {
+    position: absolute;
+    width: 870px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+/* FIM Colocando os botões centralizados no inferior dos slides */
+
+
+/* Espaçamento entre eles */
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+.manual-btn:hover {
+    background-color: #fff; /* Quando passar o mouse em cima do radio, ficará da cor desejada (no caso branco) */
+}
+
+
+
+/* Uma das principais parte desse sistema: Fazer cada uma das 3 imagens aparecerem de acordo com sua escolha na div slider*/
+#radio1:checked~.first { /* Usando o Id, dois pontos, quando ele ser escolhido (estiver checked), usando o seletor irmão(~), e quando for (.first), ou seja o primeiro slide;  */
+    margin-left: 0%; /* Quando ele estiver ativo e ser o primeiro, queremos que começe no primeiro slide*/
+}
+
+#radio2:checked~.first {
+    margin-left: -25%; /* (-25%) Vai trazer a segunda imagem para o primeiro slide;*/
+}
+
+#radio3:checked~.first {
+    margin-left: -50%; /* (-50%) Vai sair a segunda e trazer a terceira imagem para o primeiro slide;*/
+}
+
+
+
+
+/*Manipular quando cada item está com status de checked*/
+/*Basicamente ele cria mais 3 botões, que ficarão atras dos radios, é neles que a cor permancerá ( no nosso caso o branco) */
+.navigation-Botao div {
+    border: 2px solid #04558b; /* Esse azul é pra identificação*/
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-Botao {
+    position: absolute;
+    width: 870px;
+    margin-top: 390px;
+    display: flex; 
+    justify-content: center;
+}
+
+.navigation-Botao div:not(:last-child) { /* Usado para o espaçamento entre eles, menos no último (div:not(:Last-child)) */
+    margin-right: 40px;
+}
+
+/* Este é o comando para que permaneçam brancos*/
+#radio1:checked~.navigation-Botao .Botao-btn1 {
+    background-color: #ffffff;
+}
+
+#radio2:checked~.navigation-Botao .Botao-btn2 {
+    background-color: #ffffff;
+}
+
+#radio3:checked~.navigation-Botao .Botao-btn3 {
+    background-color: #ffffff;
+}
+
+/* FIM imagens rotativas */
+
+
+
+
+
+
+
+
+
+
+
+.categoria {
+    margin-top: 360px;
+    text-align: center;
+
+}
+
+#img-cat {
+    width: 32%;
+    border-radius: 25px;
+}
+
+#img-dog {
+    width: 32%;
+    border-radius: 25px;
+}
+
+img {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 18.2%;
+    border-radius: 25px;
+    
+}
+
+.acess {
+    background-color: rgb(254, 255, 169);
+    width: 69%;
+    border-radius: 20px;
+    margin: auto;
+    
+
+}
+
+.brinquedos {
+    background-color: rgb(254, 255, 169);
+    width: 69%;
+    border-radius: 20px;
+    margin: auto;
+    
+
+}
+
+#h11 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
